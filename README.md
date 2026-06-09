@@ -1,55 +1,165 @@
 # AI Internship Hunter
 
-A clean MVP foundation for storing, viewing, and managing internship opportunities.
+AI Internship Hunter is a web application that helps users discover, track, and manage internship opportunities from real-time job listings.
 
-## Stack
+The platform automatically fetches internships using the Adzuna Jobs API, stores them in Supabase, prevents duplicate entries, and displays opportunities through an interactive dashboard built with Next.js.
 
-- Next.js 15 App Router
-- JavaScript
-- Tailwind CSS
-- Supabase
-- Vercel-ready deployment
+---
 
-## Setup
+## Features
 
-1. Install dependencies:
+* Real-time internship discovery using Adzuna API
+* Search internships by role (Backend, AI, Software Engineering, etc.)
+* Automated internship ingestion into Supabase
+* Duplicate internship detection and prevention
+* Internship tracking dashboard
+* Responsive modern UI built with Next.js
+* REST API-based backend workflows
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* Next.js
+* React
+* Tailwind CSS
+
+### Backend
+
+* Next.js API Routes
+* REST APIs
+
+### Database
+
+* Supabase
+
+### External APIs
+
+* Adzuna Jobs API
+
+---
+
+## How It Works
+
+```text
+User Search
+      ↓
+Next.js API
+      ↓
+Adzuna API
+      ↓
+Internship Results
+      ↓
+Supabase Database
+      ↓
+Dashboard
+```
+
+---
+
+## Project Structure
+
+```text
+ai-internship-hunter/
+│
+├── app/
+│   ├── api/
+│   │   ├── internships/
+│   │   └── search/
+│   └── dashboard/
+│
+├── components/
+│
+├── lib/
+│   ├── supabase/
+│   └── validators/
+│
+├── public/
+│
+├── .env.local
+├── package.json
+└── README.md
+```
+
+---
+
+## Environment Variables
+
+Create a `.env.local` file and add:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
+
+ADZUNA_APP_ID=your_app_id
+ADZUNA_APP_KEY=your_app_key
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/ai-internship-hunter.git
+```
+
+Move into the project directory:
+
+```bash
+cd ai-internship-hunter
+```
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Create `.env.local`:
-
-```bash
-NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-```
-
-3. Create the Supabase table:
-
-```sql
-create table internships (
-  id uuid primary key default gen_random_uuid(),
-  company text not null,
-  role text not null,
-  location text,
-  link text,
-  source text,
-  score integer,
-  status text not null default 'Saved',
-  created_at timestamptz not null default now()
-);
-```
-
-4. Run locally:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-## API
+Open:
 
-- `GET /api/internships` lists internships, newest first.
-- `POST /api/internships` creates an internship.
+```text
+http://localhost:3000
+```
 
-Authentication, AI scoring, and OpenClaw are intentionally not implemented yet.
+---
+
+## Current Capabilities
+
+* Fetches real internship opportunities from external job APIs
+* Stores internships in Supabase
+* Prevents duplicate records
+* Tracks internship opportunities through a centralized dashboard
+* Supports custom role-based searches
+
+---
+
+## Planned Features
+
+* AI-powered internship ranking using Claude API
+* Personalized internship recommendations
+* Automated internship discovery agents
+* Daily internship notifications
+* Resume-job match scoring
+* OpenClaw workflow automation
+
+---
+
+## Author
+
+Sreeram A
+
+GitHub:
+https://github.com/sreeram665
+
+LinkedIn:
+https://linkedin.com/in/sreeram-a-9a6947251
