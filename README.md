@@ -157,9 +157,3 @@ http://localhost:3000
 ## Author
 
 Sreeram A
-
-GitHub:
-https://github.com/sreeram665
-
-LinkedIn:
-https://linkedin.com/in/sreeram-a-9a6947251
