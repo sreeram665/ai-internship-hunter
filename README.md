@@ -153,6 +153,15 @@ http://localhost:3000
 * OpenClaw workflow automation
 
 ---
+### SCREENSHOTS
+##  DASHBORD 
+
+<img width="1543" height="568" alt="image" src="https://github.com/user-attachments/assets/9fef0470-9200-478a-949f-7185223cd6e5" />
+## ADZUNA RESULT 
+<img width="520" height="172" alt="image" src="https://github.com/user-attachments/assets/d81132a6-6752-4f59-a812-ff7a525b1fbd" />
+### SUPABASE DB
+<img width="1539" height="937" alt="image" src="https://github.com/user-attachments/assets/0ad58786-cde8-4d17-a1a3-33db2b9645d6" />
+
 
 ## Author
 
